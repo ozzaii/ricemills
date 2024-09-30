@@ -3,29 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PakiRice Mills - Premium Pakistani Rice</title>
-    <meta name="description" content="Discover the finest Pakistani rice from PakiRice Mills. Our premium Basmati and other varieties bring tradition and quality to your table.">
+    <title>PakiRice Mills - Golden Grains of Pakistan</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 </head>
 <body>
+    <div class="grain-overlay"></div>
     <header>
-        <nav id="navbar">
-            <div class="container">
-                <a href="index.html" class="logo">
-                    <img src="images/logo.png" alt="PakiRice Mills Logo">
-                </a>
-                <button class="menu-toggle" aria-label="Toggle Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="products.html">Our Rice</a></li>
-                    <li><a href="process.html">Our Process</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+        <nav>
+            <div class="logo">
+                <img src="images/pakirice-logo.svg" alt="PakiRice Mills Logo">
+            </div>
+            <div class="nav-links">
+                <a href="#story">Our Story</a>
+                <a href="#varieties">Rice Varieties</a>
+                <a href="#process">Our Process</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="language-toggle">
+                <span class="active">EN</span> / <span>UR</span>
             </div>
         </nav>
     </header>
@@ -33,87 +30,109 @@
     <main>
         <section id="hero">
             <div class="hero-content">
-                <h1>Taste the Essence of Pakistan</h1>
-                <p>Premium rice cultivated with passion and tradition</p>
-                <a href="#about" class="cta-button">Discover Our Story</a>
-            </div>
-        </section>
-
-        <section id="about">
-            <div class="container">
-                <h2>Our Heritage</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>Since 1965, PakiRice Mills has been bringing the finest grains from our lush fields to your table. Our commitment to quality and tradition is as unshakeable as the roots of our rice plants.</p>
-                        <a href="process.html" class="learn-more">Learn About Our Process</a>
-                    </div>
-                    <div class="about-image">
-                        <img src="images/rice-field.jpg" alt="Lush rice fields of PakiRice Mills" loading="lazy">
-                    </div>
+                <h1 class="glowing-text">Grains of Gold</h1>
+                <p class="subtitle">Embark on a journey through Pakistan's finest rice</p>
+                <div class="cta-container">
+                    <a href="#story" class="cta-button">Explore Our Legacy</a>
                 </div>
             </div>
+            <div class="floating-grains">
+                <!-- SVG rice grains will be inserted here via JavaScript -->
+            </div>
         </section>
 
-        <section id="featured-products">
-            <div class="container">
-                <h2>Our Signature Rice</h2>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <img src="images/basmati.jpg" alt="Premium Basmati Rice" loading="lazy">
+        <section id="story" class="parallax-section">
+            <div class="story-content">
+                <h2>A Tale of Tradition</h2>
+                <p>For generations, the golden fields of Pakistan have yielded rice of unparalleled quality. PakiRice Mills continues this legacy, blending time-honored traditions with innovative techniques to bring you the finest grains nature has to offer.</p>
+            </div>
+            <div class="image-slider">
+                <!-- Images will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <section id="varieties">
+            <h2>Our Golden Varieties</h2>
+            <div class="variety-carousel">
+                <div class="variety-card" data-variety="basmati">
+                    <div class="card-front">
+                        <img src="images/basmati.jpg" alt="Basmati Rice">
                         <h3>Royal Basmati</h3>
-                        <p>Long-grain aromatic rice, perfect for biryanis and pulao</p>
-                        <a href="products.html#basmati" class="product-link">Learn More</a>
                     </div>
-                    <div class="product-card">
-                        <img src="images/jasmine.jpg" alt="Fragrant Jasmine Rice" loading="lazy">
-                        <h3>Jasmine Delight</h3>
-                        <p>Soft, sticky, and aromatic – ideal for Asian cuisines</p>
-                        <a href="products.html#jasmine" class="product-link">Learn More</a>
+                    <div class="card-back">
+                        <p>The king of rice, known for its aromatic fragrance and delicate flavor. Perfect for biryanis and pulaos.</p>
+                        <a href="#" class="learn-more">Discover More</a>
                     </div>
-                    <div class="product-card">
-                        <img src="images/brown-rice.jpg" alt="Wholesome Brown Rice" loading="lazy">
-                        <h3>Wholesome Brown</h3>
-                        <p>Nutrient-rich and hearty, for the health-conscious</p>
-                        <a href="products.html#brown" class="product-link">Learn More</a>
+                </div>
+                <!-- More variety cards will be added here -->
+            </div>
+        </section>
+
+        <section id="process" class="interactive-timeline">
+            <h2>From Paddy to Plate</h2>
+            <div class="timeline-container">
+                <!-- Interactive timeline items will be added here via JavaScript -->
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="contact-form-container">
+                <h2>Get in Touch</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Your Name</label>
                     </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>123 Golden Rice Road, Karachi, Pakistan</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+92 123 456 7890</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@pakiricemills.com</p>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p>123 Rice Road, Karachi, Pakistan</p>
-                    <p>Email: info@pakiricemills.com</p>
-                    <p>Phone: +92 123 456 7890</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Our Rice</a></li>
-                        <li><a href="process.html">Our Process</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Follow Us</h3>
-                    <div class="social-icons">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/pakirice-logo-white.svg" alt="PakiRice Mills Logo">
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 PakiRice Mills. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#story">Our Story</a>
+                <a href="#varieties">Rice Varieties</a>
+                <a href="#process">Our Process</a>
+                <a href="#contact">Contact</a>
             </div>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 PakiRice Mills. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
