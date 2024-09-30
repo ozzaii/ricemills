@@ -354,3 +354,102 @@ footer {
         height: 400px;
     }
 }
+
+/* Process Page Styles */
+#process-hero {
+    background-image: url('../images/rice-field-process.jpg');
+}
+
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: var(--primary-color);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.5rem;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.timeline-content {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#sustainability {
+    background-color: var(--bg-color);
+    padding: 3rem 0;
+}
+
+.sustainability-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 2rem 0;
+}
+
+.sustainability-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.sustainability-list li::before {
+    content: '🌱';
+    position: absolute;
+    left: 0;
+}
+
+/* Media Queries for Process Page */
+@media (min-width: 768px) {
+    .timeline-item {
+        width: 50%;
+        margin-left: 50%;
+    }
+
+    .timeline-item:nth-child(even) {
+        margin-left: 0;
+        margin-right: 50%;
+    }
+
+    .timeline-content {
+        width: 90%;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .timeline-content {
+        width: 80%;
+    }
+}
