@@ -71,3 +71,26 @@ const appearOnScroll = new IntersectionObserver(function(
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
+
+// Contact form handling
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('rice-contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you'd typically send the form data to a server
+            // For now, we'll just log it to the console
+            console.log('Form submitted!');
+            console.log('Name:', this.name.value);
+            console.log('Email:', this.email.value);
+            console.log('Subject:', this.subject.value);
+            console.log('Message:', this.message.value);
+            
+            // Clear the form
+            this.reset();
+            
+            // Show a success message (you can style this better)
+            alert('Thank you for your message! We\'ll get back to you soon.');
+        });
+    }
+});
