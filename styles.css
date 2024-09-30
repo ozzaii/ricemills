@@ -9,6 +9,7 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #333;
   line-height: 1.6;
+  background-color: #fff;
 }
 
 a {
@@ -111,7 +112,7 @@ nav.scrolled .nav-links li a {
 /* Hero Section Styles */
 .hero {
   height: 100vh;
-  background: url('images/hero.jpg') no-repeat center center/cover;
+  background: url('https://via.placeholder.com/1920x1080?text=Hero+Image') no-repeat center center/cover;
   position: relative;
   display: flex;
   align-items: center;
@@ -164,6 +165,44 @@ nav.scrolled .nav-links li a {
   .hero-content p {
     font-size: 1rem;
   }
+}
+
+/* Introduction Section */
+.introduction {
+  padding: 80px 0;
+}
+
+.introduction h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #1E90FF; /* Blue */
+}
+
+.introduction p {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.intro-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.intro-images img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.intro-images img:hover {
+  transform: scale(1.05);
 }
 
 /* About Us Section */
@@ -264,6 +303,7 @@ nav.scrolled .nav-links li a {
   gap: 20px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
 }
 
 .gallery-item {
@@ -299,6 +339,7 @@ nav.scrolled .nav-links li a {
   gap: 30px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
 }
 
 .testimonial {
@@ -328,7 +369,7 @@ nav.scrolled .nav-links li a {
   color: #1E90FF; /* Blue */
 }
 
-/* Contact Section */
+/* Contact Us Section */
 .contact {
   padding: 80px 0;
 }
@@ -494,11 +535,8 @@ footer {
   }
 
   .about .container,
-  .contact-info {
-    flex-direction: column;
-    align-items: center;
-  }
-
+  .contact-info,
+  .introduction .intro-images,
   .services .service-cards,
   .gallery-carousel,
   .testimonial-slider {
@@ -509,6 +547,17 @@ footer {
   .footer-container {
     flex-direction: column;
     align-items: center;
+  }
+
+  .footer-column {
+    margin: 20px 0;
+  }
+
+  .intro-images img,
+  .service-card,
+  .gallery-item,
+  .testimonial {
+    width: 90%;
   }
 }
 
@@ -525,7 +574,8 @@ footer {
   .services .container h2,
   .gallery .container h2,
   .testimonials .container h2,
-  .contact .container h2 {
+  .contact .container h2,
+  .introduction h2 {
     font-size: 2rem;
   }
 
@@ -536,5 +586,9 @@ footer {
   .gallery-item,
   .testimonial {
     min-width: 90%;
+  }
+
+  .intro-images img {
+    width: 100%;
   }
 }
