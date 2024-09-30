@@ -1,98 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pakistani Rice Mills | Contact Us</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - PakiRice Mills</title>
+    <meta name="description" content="Get in touch with PakiRice Mills. We're here to answer your questions about our premium Pakistani rice and take your orders.">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
 <body>
+    <header>
+        <nav id="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="PakiRice Mills Logo">
+                </a>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Our Rice</a></li>
+                    <li><a href="process.html">Our Process</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-  <!-- Navbar -->
-  <nav id="navbar">
-    <div class="nav-container">
-      <div class="logo">
-        <a href="index.html"><img src="https://via.placeholder.com/150x50?text=Rice+Mills+Logo" alt="Pakistani Rice Mills Logo"></a>
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Our Services</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </div>
-  </nav>
+    <main>
+        <section id="contact-hero" class="page-hero">
+            <div class="hero-content">
+                <h1>Get in Touch</h1>
+                <p>We're here to answer your questions and take your orders</p>
+            </div>
+        </section>
 
-  <!-- Contact Us Section -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <div class="contact-info">
-        <div class="contact-details">
-          <p><i class="fas fa-map-marker-alt"></i> 123 Rice Mill Road, Lahore, Pakistan</p>
-          <p><i class="fas fa-phone-alt"></i> +92 300 1234567</p>
-          <p><i class="fas fa-envelope"></i> info@pakistaniricemills.com</p>
+        <section id="contact-info">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-details">
+                        <h2>Contact Information</h2>
+                        <ul class="contact-list">
+                            <li><i class="fas fa-map-marker-alt"></i> 123 Rice Road, Karachi, Pakistan</li>
+                            <li><i class="fas fa-phone"></i> +92 123 456 7890</li>
+                            <li><i class="fas fa-envelope"></i> info@pakiricemills.com</li>
+                        </ul>
+                        <h3>Business Hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                        <p>Saturday: 10:00 AM - 2:00 PM</p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                    <div class="contact-form">
+                        <h2>Send Us a Message</h2>
+                        <form id="rice-contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <button type="submit" class="cta-button">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="location">
+            <div class="container">
+                <h2>Find Us</h2>
+                <div class="map-container">
+                    <!-- Replace with actual map embed code -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.476056446779!2d67.05761251500944!3d24.882712584038408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e70a31f45c1%3A0x7c6a642adb9b4644!2sKarachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2sus!4v1632901234567!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>How can I place a bulk order?</h3>
+                        <p>For bulk orders, please contact our sales team directly at sales@pakiricemills.com or call us at +92 123 456 7891.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do you ship internationally?</h3>
+                        <p>Yes, we ship to select countries. Please contact us for international shipping options and rates.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What's the shelf life of your rice?</h3>
+                        <p>Our rice, when stored properly in a cool, dry place, has a shelf life of up to 2 years from the date of packaging.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>123 Rice Road, Karachi, Pakistan</p>
+                    <p>Email: info@pakiricemills.com</p>
+                    <p>Phone: +92 123 456 7890</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Our Rice</a></li>
+                        <li><a href="process.html">Our Process</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PakiRice Mills. All rights reserved.</p>
+            </div>
         </div>
-        <div class="contact-form">
-          <form action="#" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-column">
-        <h4>About Pakistani Rice Mills</h4>
-        <p>Committed to delivering the finest quality rice through advanced milling processes and exceptional customer service.</p>
-      </div>
-      <div class="footer-column">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Our Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h4>Follow Us</h4>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-cta">
-      <a href="index.html" class="btn">Back to Top</a>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Pakistani Rice Mills. All Rights Reserved.</p>
-    </div>
-  </footer>
-
-  <!-- JavaScript -->
-  <script src="scripts.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
