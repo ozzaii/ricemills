@@ -1,76 +1,64 @@
-// Navbar Scroll Effect
-window.addEventListener('scroll', function() {
-  const navbar = document.getElementById('navbar');
-  if (window.scrollY > 50) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
 
-// Hamburger Menu Toggle
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+    menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  hamburger.classList.toggle('active');
-});
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
 
-// Close the menu when a link is clicked (optional)
-const navItems = document.querySelectorAll('.nav-links a');
-navItems.forEach(item => {
-  item.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-    hamburger.classList.remove('active');
-  });
-});
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 
-// Smooth Scrolling
-const smoothLinks = document.querySelectorAll('a[href^="#"]');
+    // Navbar color change on scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.style.backgroundColor = 'rgba(255,255,255,0.9)';
+        } else {
+            navbar.style.backgroundColor = 'transparent';
+        }
+    });
 
-smoothLinks.forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      const headerOffset = document.getElementById('navbar').offsetHeight;
-      const elementPosition = target.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    // Lazy loading images
+    if ('IntersectionObserver' in window) {
+        const imgOptions = {
+            threshold: 0,
+            rootMargin: "0px 0px 300px 0px"
+        };
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
+        const imgObserver = new IntersectionObserver((entries, imgObserver) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    preloadImage(entry.target);
+                    imgObserver.unobserve(entry.target);
+                }
+            });
+        }, imgOptions);
+
+        const imgs = document.querySelectorAll('img[data-src]');
+        imgs.forEach(img => {
+            imgObserver.observe(img);
+        });
     }
-  });
 });
 
-// Fade-In on Scroll for Sections
-const faders = document.querySelectorAll('.about, .services, .gallery, .testimonials, .contact, .introduction');
-
-const appearOptions = {
-  threshold: 0.1,
-  rootMargin: "0px 0px -50px 0px"
-};
-
-const appearOnScroll = new IntersectionObserver(function(
-  entries,
-  appearOnScroll
-) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) {
-      return;
-    } else {
-      entry.target.classList.add('visible');
-      appearOnScroll.unobserve(entry.target);
+function preloadImage(img) {
+    const src = img.getAttribute('data-src');
+    if (!src) {
+        return;
     }
-  });
-}, appearOptions);
-
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
-});
+    img.src = src;
+}
 
 // Contact form handling
 document.addEventListener('DOMContentLoaded', function() {
