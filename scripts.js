@@ -33,19 +33,21 @@ smoothLinks.forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
-    const headerOffset = document.getElementById('navbar').offsetHeight;
-    const elementPosition = target.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    if (target) {
+      const headerOffset = document.getElementById('navbar').offsetHeight;
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: 'smooth'
-    });
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
   });
 });
 
 // Fade-In on Scroll for Sections
-const faders = document.querySelectorAll('.about, .services, .gallery, .testimonials, .contact');
+const faders = document.querySelectorAll('.about, .services, .gallery, .testimonials, .contact, .introduction');
 
 const appearOptions = {
   threshold: 0.1,
