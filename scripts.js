@@ -10,27 +10,42 @@ window.addEventListener('scroll', function() {
 
 // Hamburger Menu Toggle
 const hamburger = document.querySelector('.hamburger');
-const navLinksLeft = document.querySelector('.nav-links.left');
-const navLinksRight = document.querySelector('.nav-links.right');
+const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
-  navLinksLeft.classList.toggle('active');
-  navLinksRight.classList.toggle('active');
+  navLinks.classList.toggle('active');
   hamburger.classList.toggle('active');
 });
 
 // Close the menu when a link is clicked (optional)
-const navLinks = document.querySelectorAll('.nav-links a');
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    navLinksLeft.classList.remove('active');
-    navLinksRight.classList.remove('active');
+const navItems = document.querySelectorAll('.nav-links a');
+navItems.forEach(item => {
+  item.addEventListener('click', () => {
+    navLinks.classList.remove('active');
     hamburger.classList.remove('active');
   });
 });
 
-// Fade-in on Scroll for Content Sections
-const faders = document.querySelectorAll('.content');
+// Smooth Scrolling
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
+
+smoothLinks.forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    const headerOffset = document.getElementById('navbar').offsetHeight;
+    const elementPosition = target.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Fade-In on Scroll for Sections
+const faders = document.querySelectorAll('.about, .services, .gallery, .testimonials, .contact');
 
 const appearOptions = {
   threshold: 0.1,
