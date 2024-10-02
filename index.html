@@ -3,138 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PakiRice Mills - Golden Grains of Pakistan</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/animations.js"></script>
+    <title>Özkan Rice Mill - Premium Quality Rice</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="grain-overlay"></div>
     <header>
         <nav>
-            <div class="logo">
-                <img src="images/pakirice-logo.svg" alt="PakiRice Mills Logo">
-            </div>
-            <div class="nav-links">
-                <a href="#story">Our Story</a>
-                <a href="#varieties">Rice Varieties</a>
-                <a href="#process">Our Process</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="language-toggle">
-                <span class="active">EN</span> / <span>UR</span>
+            <div class="container">
+                <a href="#" class="logo">Özkan Rice Mill</a>
+                <ul class="nav-links">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#products">Our Products</a></li>
+                    <li><a href="#process">Our Process</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="menu-toggle" id="menuToggle">☰</button>
             </div>
         </nav>
     </header>
 
     <main>
         <section id="hero">
-            <div class="hero-content">
-                <h1 class="glowing-text">Grains of Gold</h1>
-                <p class="subtitle">Embark on a journey through Pakistan's finest rice</p>
-                <div class="cta-container">
-                    <a href="#story" class="cta-button">Explore Our Legacy</a>
+            <div class="container">
+                <h1>Premium Quality Rice from Uzungöl</h1>
+                <p>Cultivating excellence in every grain since 1980</p>
+                <a href="#contact" class="btn">Get a Quote</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>About Özkan Rice Mill</h2>
+                <p>Founded in 1980, Özkan Rice Mill has been a cornerstone of quality rice production in Uzungöl. Our commitment to excellence and sustainable farming practices ensures that every grain we produce meets the highest standards of quality.</p>
+            </div>
+        </section>
+
+        <section id="products">
+            <div class="container">
+                <h2>Our Products</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="placeholder-rice1.jpg" alt="Premium Long Grain Rice">
+                        <h3>Premium Long Grain Rice</h3>
+                        <p>Perfect for pilafs and side dishes</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="placeholder-rice2.jpg" alt="Aromatic Basmati Rice">
+                        <h3>Aromatic Basmati Rice</h3>
+                        <p>Ideal for biryanis and special occasions</p>
+                    </div>
+                    <!-- Add more product cards as needed -->
                 </div>
             </div>
-            <div class="floating-grains">
-                <!-- SVG rice grains will be inserted here via JavaScript -->
-            </div>
         </section>
 
-        <section id="story" class="parallax-section">
-            <div class="story-content">
-                <h2>A Tale of Tradition</h2>
-                <p>For generations, the golden fields of Pakistan have yielded rice of unparalleled quality. PakiRice Mills continues this legacy, blending time-honored traditions with innovative techniques to bring you the finest grains nature has to offer.</p>
-            </div>
-            <div class="image-slider">
-                <!-- Images will be dynamically loaded here -->
-            </div>
-        </section>
-
-        <section id="varieties">
-            <h2>Our Golden Varieties</h2>
-            <div class="variety-carousel">
-                <div class="variety-card" data-variety="basmati">
-                    <div class="card-front">
-                        <img src="images/basmati.jpg" alt="Basmati Rice">
-                        <h3>Royal Basmati</h3>
+        <section id="process">
+            <div class="container">
+                <h2>Our Process</h2>
+                <div class="process-steps">
+                    <div class="step">
+                        <i class="fas fa-seedling"></i>
+                        <h3>Cultivation</h3>
+                        <p>Carefully planted and nurtured in our local fields</p>
                     </div>
-                    <div class="card-back">
-                        <p>The king of rice, known for its aromatic fragrance and delicate flavor. Perfect for biryanis and pulaos.</p>
-                        <a href="#" class="learn-more">Discover More</a>
+                    <div class="step">
+                        <i class="fas fa-warehouse"></i>
+                        <h3>Harvesting & Storage</h3>
+                        <p>Harvested at peak ripeness and properly stored</p>
+                    </div>
+                    <div class="step">
+                        <i class="fas fa-industry"></i>
+                        <h3>Milling & Processing</h3>
+                        <p>State-of-the-art milling for the perfect grain</p>
+                    </div>
+                    <div class="step">
+                        <i class="fas fa-box"></i>
+                        <h3>Packaging & Distribution</h3>
+                        <p>Carefully packaged and distributed to ensure freshness</p>
                     </div>
                 </div>
-                <!-- More variety cards will be added here -->
-            </div>
-        </section>
-
-        <section id="process" class="interactive-timeline">
-            <h2>From Paddy to Plate</h2>
-            <div class="timeline-container">
-                <!-- Interactive timeline items will be added here via JavaScript -->
             </div>
         </section>
 
         <section id="contact">
-            <div class="contact-form-container">
-                <h2>Get in Touch</h2>
-                <form id="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" required>
-                        <label for="name">Your Name</label>
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-wrapper">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                    <div class="contact-info">
+                        <h3>Our Location</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Uzungöl Mahallesi, 61960 Çaykara/Trabzon, Turkey</p>
+                        <p><i class="fas fa-phone"></i> +90 462 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> info@ozkanricemill.com</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="email" id="email" required>
-                        <label for="email">Your Email</label>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" required></textarea>
-                        <label for="message">Your Message</label>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-            </div>
-            <div class="contact-info">
-                <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>123 Golden Rice Road, Karachi, Pakistan</p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-phone"></i>
-                    <p>+92 123 456 7890</p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-envelope"></i>
-                    <p>info@pakiricemills.com</p>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="images/pakirice-logo-white.svg" alt="PakiRice Mills Logo">
-            </div>
-            <div class="footer-links">
-                <a href="#story">Our Story</a>
-                <a href="#varieties">Rice Varieties</a>
-                <a href="#process">Our Process</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="social-links">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 PakiRice Mills. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 Özkan Rice Mill. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
